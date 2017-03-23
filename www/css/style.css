@@ -1,0 +1,4222 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Normalize.scss settings
+   ========================================================================== */
+/**
+ * Includes legacy browser support IE6/7
+ *
+ * Set to false if you want to drop support for IE6 and IE7
+ */
+/* Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ * 3. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *  `em` units.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active, a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Addresses styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 8/9/10.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *  Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * 4. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *  and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *  `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *  Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ *  Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 3. Corrects text not wrapping in Firefox 3.
+ * 4. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+.nav-controls {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: UbuntuBold; }
+  .nav-controls .t-cell {
+    vertical-align: middle; }
+  .nav-controls a.control-icon, .nav-controls span.control-icon {
+    text-decoration: none;
+    display: inline-block; }
+  .nav-controls .control-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #9acb40;
+    color: white;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0; }
+    .nav-controls .control-icon[class*="el-icon-"] {
+      font-size: 25px; }
+    .nav-controls .control-icon.fa {
+      font-size: 40px; }
+    .nav-controls .control-icon.disabled {
+      background-color: #999;
+      color: white; }
+    .nav-controls .control-icon.ng-click-active:not(.disabled) {
+      background-color: #d9df3f; }
+    .nav-controls .control-icon:focus {
+      outline: 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+
+.panel-modal-container {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 100; }
+  .panel-modal-container.z200 {
+    z-index: 200; }
+  .panel-modal-container .panel-modal-body {
+    padding: 60px 20px 0 20px;
+    color: white;
+    box-sizing: border-box; }
+    .panel-modal-container .panel-modal-body .modal-title {
+      font-size: 30px; }
+      .panel-modal-container .panel-modal-body .modal-title + .modal-title {
+        margin-top: 10px; }
+    .panel-modal-container .panel-modal-body .modal-title {
+      text-align: center;
+      width: 100%; }
+
+i.el-icon-star {
+  color: #999; }
+  i.el-icon-star.rewarded {
+    color: #f3d231; }
+
+@media only screen and (min-width: 500px) {
+  .panel-modal-container .panel-modal-body {
+    padding: 90px 30px 0 30px; }
+    .panel-modal-container .panel-modal-body .modal-title {
+      font-size: 45px; }
+      .panel-modal-container .panel-modal-body .modal-title + .modal-title {
+        margin-top: 15px; }
+  .nav-controls .control-icon {
+    width: 75px;
+    height: 75px;
+    line-height: 75px; }
+    .nav-controls .control-icon[class*="el-icon-"] {
+      font-size: 37.5px; }
+    .nav-controls .control-icon.fa {
+      font-size: 60px; } }
+
+@media only screen and (max-height: 480px) {
+  .panel-modal-container .panel-modal-body {
+    padding: 54px 18px 0 18px; }
+    .panel-modal-container .panel-modal-body .modal-title {
+      font-size: 27px; }
+      .panel-modal-container .panel-modal-body .modal-title + .modal-title {
+        margin-top: 9px; }
+  .nav-controls .control-icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px; }
+    .nav-controls .control-icon[class*="el-icon-"] {
+      font-size: 22.5px; }
+    .nav-controls .control-icon.fa {
+      font-size: 36px; } }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-family: UbuntuBold; }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.app-background {
+  -webkit-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  -ms-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+  opacity: 0.1;
+  position: absolute;
+  left: 0;
+  right: 100%;
+  top: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #f0f0f0; }
+  .app-background.fullOpacity {
+    opacity: 1; }
+  .app-background .square-item {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    margin: 0 2px; }
+    .app-background .square-item.c2d662 {
+      background-color: #c2d662; }
+    .app-background .square-item.d8de3f {
+      background-color: #d8de3f; }
+    .app-background .square-item.cbcb44 {
+      background-color: #cbcb44; }
+    .app-background .square-item.a2a931 {
+      background-color: #a2a931; }
+    .app-background .square-item.e1e35c {
+      background-color: #e1e35c; }
+    .app-background .square-item.x8c9830 {
+      background-color: #8c9830; }
+    .app-background .square-item.a2c64c {
+      background-color: #a2c64c; }
+    .app-background .square-item.ebe85b {
+      background-color: #ebe85b; }
+  .app-background .top-squares {
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    text-align: right; }
+  .app-background .bottom-squares {
+    position: absolute;
+    bottom: 0;
+    left: 2px; }
+
+.layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: transparent;
+  font-family: Tahoma;
+  box-sizing: border-box;
+  overflow-x: hidden; }
+
+.nav-link {
+  color: #3443ab;
+  text-decoration: none;
+  cursor: pointer; }
+  .nav-link:focus {
+    outline: none; }
+
+.table {
+  display: table; }
+  .table .t-row {
+    display: table-row; }
+    .table .t-row .t-cell {
+      display: table-cell; }
+
+.wh100 {
+  width: 100%;
+  height: 100%; }
+
+.block {
+  display: block; }
+
+.table {
+  display: table; }
+  .table .t-row {
+    display: table-row; }
+    .table .t-row .t-cell {
+      display: table-cell; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.inline-block {
+  display: inline-block; }
+
+@media only screen and (min-width: 768px) {
+  .layout {
+    max-width: 768px;
+    margin: 0 auto; } }
+
+@font-face {
+  font-family: DeusEx;
+  src: url(../fonts/DeusEx.ttf); }
+
+@font-face {
+  font-family: UbuntuBold;
+  src: url(../fonts/Ubuntu-B.ttf); }
+
+@font-face {
+  font-family: Ubuntu;
+  src: url(../fonts/Ubuntu-R.ttf); }
+
+.home {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  text-align: center; }
+  .home .app-title {
+    font-family: DeusEx;
+    font-size: 42px;
+    color: #9bcb41; }
+  .home .menu {
+    padding: 0 40px;
+    margin-top: 20px; }
+    .home .menu .menu-item {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 45px;
+      padding: 10px 0;
+      background-color: #9bcb41;
+      text-align: center;
+      font-size: 25px;
+      font-family: UbuntuBold;
+      color: white; }
+      .home .menu .menu-item.disabled {
+        background-color: #c6c7c9; }
+      .home .menu .menu-item.ng-click-active {
+        background-color: #d9df3f; }
+      .home .menu .menu-item + .menu-item {
+        margin-top: 20px; }
+  .home .download-icons {
+    margin-top: 10px; }
+    .home .download-icons img {
+      width: 129px;
+      height: 45px;
+      padding: 0 10px; }
+      .home .download-icons img.istore {
+        width: 147px;
+        height: 45px; }
+
+.chapters-body {
+  overflow: hidden; }
+  .chapters-body .chapters-container {
+    display: inline-block; }
+    .chapters-body .chapters-container.include-transition {
+      -webkit-transition: -webkit-transform 0.2s ease-out;
+      -moz-transition: -moz-transform 0.2s ease-out;
+      -ms-transition: -ms-transform 0.2s ease-out;
+      -o-transition: -o-transform 0.2s ease-out;
+      transition: transform 0.2s ease-out; }
+
+.levels {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  .levels .levels-links {
+    float: left;
+    width: 100%;
+    padding: 0 2px;
+    box-sizing: border-box; }
+  .levels .level-item-row {
+    text-align: justify;
+    text-justify: distribute-all-lines;
+    font-size: 0.1px;
+    margin-bottom: 10px; }
+    .levels .level-item-row:after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
+    .levels .level-item-row:last-child {
+      margin-bottom: 0px; }
+  .levels .level-item {
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box; }
+    .levels .level-item .ng-click-active .level-item-icon {
+      background-color: #d9df3f; }
+    .levels .level-item .level-item-icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      font-size: 25px;
+      line-height: 50px;
+      background-color: #9acb40;
+      color: #fff;
+      font-family: UbuntuBold; }
+      .levels .level-item .level-item-icon.disabled {
+        background-color: #b6b6b6;
+        color: #505050; }
+    .levels .level-item .level-icon-rating {
+      width: 50px;
+      height: 25px;
+      line-height: 35px;
+      display: inline-block; }
+      .levels .level-item .level-icon-rating i {
+        font-size: 14px;
+        text-align: center;
+        color: #999; }
+        .levels .level-item .level-icon-rating i.rewarded {
+          color: #f3d231; }
+  .levels .nav-controls .chapter-label {
+    text-align: right; }
+    .levels .nav-controls .chapter-label h1 {
+      color: #9acb40;
+      font-family: UbuntuBold;
+      font-size: 35px;
+      line-height: 50px;
+      margin: 0; }
+  .levels .nav-controls .level-breadcrumb .fa {
+    display: inline-block;
+    color: #9acb40;
+    font-size: 16px; }
+    .levels .nav-controls .level-breadcrumb .fa.active {
+      color: #f3d231; }
+  .levels .game-description {
+    padding: 0 20px;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+    font-family: Arial; }
+    .levels .game-description p {
+      text-align: justify; }
+
+@media only screen and (min-width: 500px) {
+  /* styles for tablets and desktops */
+  .home .app-title {
+    font-size: 63px; }
+  .home .menu {
+    margin-top: 40px; }
+    .home .menu .menu-item {
+      max-width: 500px;
+      font-size: 38px;
+      min-height: 68px;
+      padding: 15px 0; }
+      .home .menu .menu-item + .menu-item {
+        margin-top: 15px; }
+  .home .download-icons {
+    margin-top: 30px; }
+  .levels .level-item .level-item-icon {
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 37.5px; }
+  .levels .level-item .level-icon-rating {
+    width: 75px;
+    height: 37.5px;
+    line-height: 52.5px; }
+    .levels .level-item .level-icon-rating i {
+      font-size: 21px; }
+  .levels .nav-controls .chapter-label {
+    text-align: right; }
+    .levels .nav-controls .chapter-label h1 {
+      color: #9acb40;
+      font-family: UbuntuBold;
+      font-size: 52.5px;
+      line-height: 75px;
+      margin: 0; }
+  .levels .nav-controls .level-breadcrumb .fa {
+    display: inline-block;
+    color: #9acb40;
+    font-size: 24px; }
+    .levels .nav-controls .level-breadcrumb .fa.active {
+      color: #f3d231; } }
+
+@media only screen and (max-height: 480px) {
+  .levels .level-item .level-item-icon {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 22.5px; }
+  .levels .level-item .level-icon-rating {
+    width: 45px;
+    height: 22.5px;
+    line-height: 31.5px; }
+    .levels .level-item .level-icon-rating i {
+      font-size: 12.6px; }
+  .levels .nav-controls .chapter-label {
+    text-align: right; }
+    .levels .nav-controls .chapter-label h1 {
+      color: #9acb40;
+      font-family: UbuntuBold;
+      font-size: 31.5px;
+      line-height: 45px;
+      margin: 0; }
+  .levels .nav-controls .level-breadcrumb .fa {
+    display: inline-block;
+    color: #9acb40;
+    font-size: 14.4px; }
+    .levels .nav-controls .level-breadcrumb .fa.active {
+      color: #f3d231; } }
+
+@-webkit-keyframes pulsateBorder {
+  0% {
+    border-color: white; }
+  50% {
+    border-color: #FFB200; }
+  100% {
+    border-color: white; } }
+
+@-moz-keyframes pulsateBorder {
+  0% {
+    border-color: white; }
+  50% {
+    border-color: #FFB200; }
+  100% {
+    border-color: white; } }
+
+@keyframes pulsateBorder {
+  0% {
+    border-color: white; }
+  50% {
+    border-color: #FFB200; }
+  100% {
+    border-color: white; } }
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(0, -10px, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@-moz-keyframes pulsate {
+  0% {
+    -moz-transform: translate3d(0, 0, 0); }
+  50% {
+    -moz-transform: translate3d(0, -10px, 0); }
+  100% {
+    -moz-transform: translate3d(0, 0, 0); } }
+
+@keyframes pulsate {
+  0% {
+    transform: translate3d(0, 0, 0); }
+  50% {
+    transform: translate3d(0, -10px, 0); }
+  100% {
+    transform: translate3d(0, 0, 0); } }
+
+.game-container .game-field {
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center; }
+  .game-container .game-field .game-matrix {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    box-sizing: border-box; }
+    .game-container .game-field .game-matrix .matrix-cell {
+      cursor: pointer;
+      font-family: UbuntuBold;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 2px solid white;
+      -moz-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+    .game-container .game-field .game-matrix .matrix-cell {
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #a2c64c;
+      color: white;
+      z-index: 10;
+      -webkit-transition: -webkit-transform 0.1s ease-out;
+      -moz-transition: -moz-transform 0.1s ease-out;
+      -ms-transition: -ms-transform 0.1s ease-out;
+      -o-transition: -o-transform 0.1s ease-out;
+      transition: transform 0.1s ease-out; }
+      .game-container .game-field .game-matrix .matrix-cell.transferred {
+        z-index: 5; }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="0"] {
+        -moz-transform: translate3d(0%, 0%, 0);
+        -o-transform: translate3d(0%, 0%, 0);
+        -ms-transform: translate3d(0%, 0%, 0);
+        -webkit-transform: translate3d(0%, 0%, 0);
+        transform: translate3d(0%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="0"].moveUp {
+          -moz-transform: translate3d(0%, -25%, 0);
+          -o-transform: translate3d(0%, -25%, 0);
+          -ms-transform: translate3d(0%, -25%, 0);
+          -webkit-transform: translate3d(0%, -25%, 0);
+          transform: translate3d(0%, -25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="0"].moveDown {
+          -moz-transform: translate3d(0%, 25%, 0);
+          -o-transform: translate3d(0%, 25%, 0);
+          -ms-transform: translate3d(0%, 25%, 0);
+          -webkit-transform: translate3d(0%, 25%, 0);
+          transform: translate3d(0%, 25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="0"].moveLeft {
+          -moz-transform: translate3d(-25%, 0%, 0);
+          -o-transform: translate3d(-25%, 0%, 0);
+          -ms-transform: translate3d(-25%, 0%, 0);
+          -webkit-transform: translate3d(-25%, 0%, 0);
+          transform: translate3d(-25%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="0"].moveRight {
+          -moz-transform: translate3d(25%, 0%, 0);
+          -o-transform: translate3d(25%, 0%, 0);
+          -ms-transform: translate3d(25%, 0%, 0);
+          -webkit-transform: translate3d(25%, 0%, 0);
+          transform: translate3d(25%, 0%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="1"] {
+        -moz-transform: translate3d(100%, 0%, 0);
+        -o-transform: translate3d(100%, 0%, 0);
+        -ms-transform: translate3d(100%, 0%, 0);
+        -webkit-transform: translate3d(100%, 0%, 0);
+        transform: translate3d(100%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="1"].moveUp {
+          -moz-transform: translate3d(100%, -25%, 0);
+          -o-transform: translate3d(100%, -25%, 0);
+          -ms-transform: translate3d(100%, -25%, 0);
+          -webkit-transform: translate3d(100%, -25%, 0);
+          transform: translate3d(100%, -25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="1"].moveDown {
+          -moz-transform: translate3d(100%, 25%, 0);
+          -o-transform: translate3d(100%, 25%, 0);
+          -ms-transform: translate3d(100%, 25%, 0);
+          -webkit-transform: translate3d(100%, 25%, 0);
+          transform: translate3d(100%, 25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="1"].moveLeft {
+          -moz-transform: translate3d(75%, 0%, 0);
+          -o-transform: translate3d(75%, 0%, 0);
+          -ms-transform: translate3d(75%, 0%, 0);
+          -webkit-transform: translate3d(75%, 0%, 0);
+          transform: translate3d(75%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="1"].moveRight {
+          -moz-transform: translate3d(125%, 0%, 0);
+          -o-transform: translate3d(125%, 0%, 0);
+          -ms-transform: translate3d(125%, 0%, 0);
+          -webkit-transform: translate3d(125%, 0%, 0);
+          transform: translate3d(125%, 0%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="2"] {
+        -moz-transform: translate3d(200%, 0%, 0);
+        -o-transform: translate3d(200%, 0%, 0);
+        -ms-transform: translate3d(200%, 0%, 0);
+        -webkit-transform: translate3d(200%, 0%, 0);
+        transform: translate3d(200%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="2"].moveUp {
+          -moz-transform: translate3d(200%, -25%, 0);
+          -o-transform: translate3d(200%, -25%, 0);
+          -ms-transform: translate3d(200%, -25%, 0);
+          -webkit-transform: translate3d(200%, -25%, 0);
+          transform: translate3d(200%, -25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="2"].moveDown {
+          -moz-transform: translate3d(200%, 25%, 0);
+          -o-transform: translate3d(200%, 25%, 0);
+          -ms-transform: translate3d(200%, 25%, 0);
+          -webkit-transform: translate3d(200%, 25%, 0);
+          transform: translate3d(200%, 25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="2"].moveLeft {
+          -moz-transform: translate3d(175%, 0%, 0);
+          -o-transform: translate3d(175%, 0%, 0);
+          -ms-transform: translate3d(175%, 0%, 0);
+          -webkit-transform: translate3d(175%, 0%, 0);
+          transform: translate3d(175%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="2"].moveRight {
+          -moz-transform: translate3d(225%, 0%, 0);
+          -o-transform: translate3d(225%, 0%, 0);
+          -ms-transform: translate3d(225%, 0%, 0);
+          -webkit-transform: translate3d(225%, 0%, 0);
+          transform: translate3d(225%, 0%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="3"] {
+        -moz-transform: translate3d(300%, 0%, 0);
+        -o-transform: translate3d(300%, 0%, 0);
+        -ms-transform: translate3d(300%, 0%, 0);
+        -webkit-transform: translate3d(300%, 0%, 0);
+        transform: translate3d(300%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="3"].moveUp {
+          -moz-transform: translate3d(300%, -25%, 0);
+          -o-transform: translate3d(300%, -25%, 0);
+          -ms-transform: translate3d(300%, -25%, 0);
+          -webkit-transform: translate3d(300%, -25%, 0);
+          transform: translate3d(300%, -25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="3"].moveDown {
+          -moz-transform: translate3d(300%, 25%, 0);
+          -o-transform: translate3d(300%, 25%, 0);
+          -ms-transform: translate3d(300%, 25%, 0);
+          -webkit-transform: translate3d(300%, 25%, 0);
+          transform: translate3d(300%, 25%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="3"].moveLeft {
+          -moz-transform: translate3d(275%, 0%, 0);
+          -o-transform: translate3d(275%, 0%, 0);
+          -ms-transform: translate3d(275%, 0%, 0);
+          -webkit-transform: translate3d(275%, 0%, 0);
+          transform: translate3d(275%, 0%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="0"][data-col="3"].moveRight {
+          -moz-transform: translate3d(325%, 0%, 0);
+          -o-transform: translate3d(325%, 0%, 0);
+          -ms-transform: translate3d(325%, 0%, 0);
+          -webkit-transform: translate3d(325%, 0%, 0);
+          transform: translate3d(325%, 0%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="0"] {
+        -moz-transform: translate3d(0%, 100%, 0);
+        -o-transform: translate3d(0%, 100%, 0);
+        -ms-transform: translate3d(0%, 100%, 0);
+        -webkit-transform: translate3d(0%, 100%, 0);
+        transform: translate3d(0%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="0"].moveUp {
+          -moz-transform: translate3d(0%, 75%, 0);
+          -o-transform: translate3d(0%, 75%, 0);
+          -ms-transform: translate3d(0%, 75%, 0);
+          -webkit-transform: translate3d(0%, 75%, 0);
+          transform: translate3d(0%, 75%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="0"].moveDown {
+          -moz-transform: translate3d(0%, 125%, 0);
+          -o-transform: translate3d(0%, 125%, 0);
+          -ms-transform: translate3d(0%, 125%, 0);
+          -webkit-transform: translate3d(0%, 125%, 0);
+          transform: translate3d(0%, 125%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="0"].moveLeft {
+          -moz-transform: translate3d(-25%, 100%, 0);
+          -o-transform: translate3d(-25%, 100%, 0);
+          -ms-transform: translate3d(-25%, 100%, 0);
+          -webkit-transform: translate3d(-25%, 100%, 0);
+          transform: translate3d(-25%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="0"].moveRight {
+          -moz-transform: translate3d(25%, 100%, 0);
+          -o-transform: translate3d(25%, 100%, 0);
+          -ms-transform: translate3d(25%, 100%, 0);
+          -webkit-transform: translate3d(25%, 100%, 0);
+          transform: translate3d(25%, 100%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="1"] {
+        -moz-transform: translate3d(100%, 100%, 0);
+        -o-transform: translate3d(100%, 100%, 0);
+        -ms-transform: translate3d(100%, 100%, 0);
+        -webkit-transform: translate3d(100%, 100%, 0);
+        transform: translate3d(100%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="1"].moveUp {
+          -moz-transform: translate3d(100%, 75%, 0);
+          -o-transform: translate3d(100%, 75%, 0);
+          -ms-transform: translate3d(100%, 75%, 0);
+          -webkit-transform: translate3d(100%, 75%, 0);
+          transform: translate3d(100%, 75%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="1"].moveDown {
+          -moz-transform: translate3d(100%, 125%, 0);
+          -o-transform: translate3d(100%, 125%, 0);
+          -ms-transform: translate3d(100%, 125%, 0);
+          -webkit-transform: translate3d(100%, 125%, 0);
+          transform: translate3d(100%, 125%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="1"].moveLeft {
+          -moz-transform: translate3d(75%, 100%, 0);
+          -o-transform: translate3d(75%, 100%, 0);
+          -ms-transform: translate3d(75%, 100%, 0);
+          -webkit-transform: translate3d(75%, 100%, 0);
+          transform: translate3d(75%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="1"].moveRight {
+          -moz-transform: translate3d(125%, 100%, 0);
+          -o-transform: translate3d(125%, 100%, 0);
+          -ms-transform: translate3d(125%, 100%, 0);
+          -webkit-transform: translate3d(125%, 100%, 0);
+          transform: translate3d(125%, 100%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="2"] {
+        -moz-transform: translate3d(200%, 100%, 0);
+        -o-transform: translate3d(200%, 100%, 0);
+        -ms-transform: translate3d(200%, 100%, 0);
+        -webkit-transform: translate3d(200%, 100%, 0);
+        transform: translate3d(200%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="2"].moveUp {
+          -moz-transform: translate3d(200%, 75%, 0);
+          -o-transform: translate3d(200%, 75%, 0);
+          -ms-transform: translate3d(200%, 75%, 0);
+          -webkit-transform: translate3d(200%, 75%, 0);
+          transform: translate3d(200%, 75%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="2"].moveDown {
+          -moz-transform: translate3d(200%, 125%, 0);
+          -o-transform: translate3d(200%, 125%, 0);
+          -ms-transform: translate3d(200%, 125%, 0);
+          -webkit-transform: translate3d(200%, 125%, 0);
+          transform: translate3d(200%, 125%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="2"].moveLeft {
+          -moz-transform: translate3d(175%, 100%, 0);
+          -o-transform: translate3d(175%, 100%, 0);
+          -ms-transform: translate3d(175%, 100%, 0);
+          -webkit-transform: translate3d(175%, 100%, 0);
+          transform: translate3d(175%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="2"].moveRight {
+          -moz-transform: translate3d(225%, 100%, 0);
+          -o-transform: translate3d(225%, 100%, 0);
+          -ms-transform: translate3d(225%, 100%, 0);
+          -webkit-transform: translate3d(225%, 100%, 0);
+          transform: translate3d(225%, 100%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="3"] {
+        -moz-transform: translate3d(300%, 100%, 0);
+        -o-transform: translate3d(300%, 100%, 0);
+        -ms-transform: translate3d(300%, 100%, 0);
+        -webkit-transform: translate3d(300%, 100%, 0);
+        transform: translate3d(300%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="3"].moveUp {
+          -moz-transform: translate3d(300%, 75%, 0);
+          -o-transform: translate3d(300%, 75%, 0);
+          -ms-transform: translate3d(300%, 75%, 0);
+          -webkit-transform: translate3d(300%, 75%, 0);
+          transform: translate3d(300%, 75%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="3"].moveDown {
+          -moz-transform: translate3d(300%, 125%, 0);
+          -o-transform: translate3d(300%, 125%, 0);
+          -ms-transform: translate3d(300%, 125%, 0);
+          -webkit-transform: translate3d(300%, 125%, 0);
+          transform: translate3d(300%, 125%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="3"].moveLeft {
+          -moz-transform: translate3d(275%, 100%, 0);
+          -o-transform: translate3d(275%, 100%, 0);
+          -ms-transform: translate3d(275%, 100%, 0);
+          -webkit-transform: translate3d(275%, 100%, 0);
+          transform: translate3d(275%, 100%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="1"][data-col="3"].moveRight {
+          -moz-transform: translate3d(325%, 100%, 0);
+          -o-transform: translate3d(325%, 100%, 0);
+          -ms-transform: translate3d(325%, 100%, 0);
+          -webkit-transform: translate3d(325%, 100%, 0);
+          transform: translate3d(325%, 100%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="0"] {
+        -moz-transform: translate3d(0%, 200%, 0);
+        -o-transform: translate3d(0%, 200%, 0);
+        -ms-transform: translate3d(0%, 200%, 0);
+        -webkit-transform: translate3d(0%, 200%, 0);
+        transform: translate3d(0%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="0"].moveUp {
+          -moz-transform: translate3d(0%, 175%, 0);
+          -o-transform: translate3d(0%, 175%, 0);
+          -ms-transform: translate3d(0%, 175%, 0);
+          -webkit-transform: translate3d(0%, 175%, 0);
+          transform: translate3d(0%, 175%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="0"].moveDown {
+          -moz-transform: translate3d(0%, 225%, 0);
+          -o-transform: translate3d(0%, 225%, 0);
+          -ms-transform: translate3d(0%, 225%, 0);
+          -webkit-transform: translate3d(0%, 225%, 0);
+          transform: translate3d(0%, 225%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="0"].moveLeft {
+          -moz-transform: translate3d(-25%, 200%, 0);
+          -o-transform: translate3d(-25%, 200%, 0);
+          -ms-transform: translate3d(-25%, 200%, 0);
+          -webkit-transform: translate3d(-25%, 200%, 0);
+          transform: translate3d(-25%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="0"].moveRight {
+          -moz-transform: translate3d(25%, 200%, 0);
+          -o-transform: translate3d(25%, 200%, 0);
+          -ms-transform: translate3d(25%, 200%, 0);
+          -webkit-transform: translate3d(25%, 200%, 0);
+          transform: translate3d(25%, 200%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="1"] {
+        -moz-transform: translate3d(100%, 200%, 0);
+        -o-transform: translate3d(100%, 200%, 0);
+        -ms-transform: translate3d(100%, 200%, 0);
+        -webkit-transform: translate3d(100%, 200%, 0);
+        transform: translate3d(100%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="1"].moveUp {
+          -moz-transform: translate3d(100%, 175%, 0);
+          -o-transform: translate3d(100%, 175%, 0);
+          -ms-transform: translate3d(100%, 175%, 0);
+          -webkit-transform: translate3d(100%, 175%, 0);
+          transform: translate3d(100%, 175%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="1"].moveDown {
+          -moz-transform: translate3d(100%, 225%, 0);
+          -o-transform: translate3d(100%, 225%, 0);
+          -ms-transform: translate3d(100%, 225%, 0);
+          -webkit-transform: translate3d(100%, 225%, 0);
+          transform: translate3d(100%, 225%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="1"].moveLeft {
+          -moz-transform: translate3d(75%, 200%, 0);
+          -o-transform: translate3d(75%, 200%, 0);
+          -ms-transform: translate3d(75%, 200%, 0);
+          -webkit-transform: translate3d(75%, 200%, 0);
+          transform: translate3d(75%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="1"].moveRight {
+          -moz-transform: translate3d(125%, 200%, 0);
+          -o-transform: translate3d(125%, 200%, 0);
+          -ms-transform: translate3d(125%, 200%, 0);
+          -webkit-transform: translate3d(125%, 200%, 0);
+          transform: translate3d(125%, 200%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="2"] {
+        -moz-transform: translate3d(200%, 200%, 0);
+        -o-transform: translate3d(200%, 200%, 0);
+        -ms-transform: translate3d(200%, 200%, 0);
+        -webkit-transform: translate3d(200%, 200%, 0);
+        transform: translate3d(200%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="2"].moveUp {
+          -moz-transform: translate3d(200%, 175%, 0);
+          -o-transform: translate3d(200%, 175%, 0);
+          -ms-transform: translate3d(200%, 175%, 0);
+          -webkit-transform: translate3d(200%, 175%, 0);
+          transform: translate3d(200%, 175%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="2"].moveDown {
+          -moz-transform: translate3d(200%, 225%, 0);
+          -o-transform: translate3d(200%, 225%, 0);
+          -ms-transform: translate3d(200%, 225%, 0);
+          -webkit-transform: translate3d(200%, 225%, 0);
+          transform: translate3d(200%, 225%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="2"].moveLeft {
+          -moz-transform: translate3d(175%, 200%, 0);
+          -o-transform: translate3d(175%, 200%, 0);
+          -ms-transform: translate3d(175%, 200%, 0);
+          -webkit-transform: translate3d(175%, 200%, 0);
+          transform: translate3d(175%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="2"].moveRight {
+          -moz-transform: translate3d(225%, 200%, 0);
+          -o-transform: translate3d(225%, 200%, 0);
+          -ms-transform: translate3d(225%, 200%, 0);
+          -webkit-transform: translate3d(225%, 200%, 0);
+          transform: translate3d(225%, 200%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="3"] {
+        -moz-transform: translate3d(300%, 200%, 0);
+        -o-transform: translate3d(300%, 200%, 0);
+        -ms-transform: translate3d(300%, 200%, 0);
+        -webkit-transform: translate3d(300%, 200%, 0);
+        transform: translate3d(300%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="3"].moveUp {
+          -moz-transform: translate3d(300%, 175%, 0);
+          -o-transform: translate3d(300%, 175%, 0);
+          -ms-transform: translate3d(300%, 175%, 0);
+          -webkit-transform: translate3d(300%, 175%, 0);
+          transform: translate3d(300%, 175%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="3"].moveDown {
+          -moz-transform: translate3d(300%, 225%, 0);
+          -o-transform: translate3d(300%, 225%, 0);
+          -ms-transform: translate3d(300%, 225%, 0);
+          -webkit-transform: translate3d(300%, 225%, 0);
+          transform: translate3d(300%, 225%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="3"].moveLeft {
+          -moz-transform: translate3d(275%, 200%, 0);
+          -o-transform: translate3d(275%, 200%, 0);
+          -ms-transform: translate3d(275%, 200%, 0);
+          -webkit-transform: translate3d(275%, 200%, 0);
+          transform: translate3d(275%, 200%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="2"][data-col="3"].moveRight {
+          -moz-transform: translate3d(325%, 200%, 0);
+          -o-transform: translate3d(325%, 200%, 0);
+          -ms-transform: translate3d(325%, 200%, 0);
+          -webkit-transform: translate3d(325%, 200%, 0);
+          transform: translate3d(325%, 200%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="0"] {
+        -moz-transform: translate3d(0%, 300%, 0);
+        -o-transform: translate3d(0%, 300%, 0);
+        -ms-transform: translate3d(0%, 300%, 0);
+        -webkit-transform: translate3d(0%, 300%, 0);
+        transform: translate3d(0%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="0"].moveUp {
+          -moz-transform: translate3d(0%, 275%, 0);
+          -o-transform: translate3d(0%, 275%, 0);
+          -ms-transform: translate3d(0%, 275%, 0);
+          -webkit-transform: translate3d(0%, 275%, 0);
+          transform: translate3d(0%, 275%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="0"].moveDown {
+          -moz-transform: translate3d(0%, 325%, 0);
+          -o-transform: translate3d(0%, 325%, 0);
+          -ms-transform: translate3d(0%, 325%, 0);
+          -webkit-transform: translate3d(0%, 325%, 0);
+          transform: translate3d(0%, 325%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="0"].moveLeft {
+          -moz-transform: translate3d(-25%, 300%, 0);
+          -o-transform: translate3d(-25%, 300%, 0);
+          -ms-transform: translate3d(-25%, 300%, 0);
+          -webkit-transform: translate3d(-25%, 300%, 0);
+          transform: translate3d(-25%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="0"].moveRight {
+          -moz-transform: translate3d(25%, 300%, 0);
+          -o-transform: translate3d(25%, 300%, 0);
+          -ms-transform: translate3d(25%, 300%, 0);
+          -webkit-transform: translate3d(25%, 300%, 0);
+          transform: translate3d(25%, 300%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="1"] {
+        -moz-transform: translate3d(100%, 300%, 0);
+        -o-transform: translate3d(100%, 300%, 0);
+        -ms-transform: translate3d(100%, 300%, 0);
+        -webkit-transform: translate3d(100%, 300%, 0);
+        transform: translate3d(100%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="1"].moveUp {
+          -moz-transform: translate3d(100%, 275%, 0);
+          -o-transform: translate3d(100%, 275%, 0);
+          -ms-transform: translate3d(100%, 275%, 0);
+          -webkit-transform: translate3d(100%, 275%, 0);
+          transform: translate3d(100%, 275%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="1"].moveDown {
+          -moz-transform: translate3d(100%, 325%, 0);
+          -o-transform: translate3d(100%, 325%, 0);
+          -ms-transform: translate3d(100%, 325%, 0);
+          -webkit-transform: translate3d(100%, 325%, 0);
+          transform: translate3d(100%, 325%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="1"].moveLeft {
+          -moz-transform: translate3d(75%, 300%, 0);
+          -o-transform: translate3d(75%, 300%, 0);
+          -ms-transform: translate3d(75%, 300%, 0);
+          -webkit-transform: translate3d(75%, 300%, 0);
+          transform: translate3d(75%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="1"].moveRight {
+          -moz-transform: translate3d(125%, 300%, 0);
+          -o-transform: translate3d(125%, 300%, 0);
+          -ms-transform: translate3d(125%, 300%, 0);
+          -webkit-transform: translate3d(125%, 300%, 0);
+          transform: translate3d(125%, 300%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="2"] {
+        -moz-transform: translate3d(200%, 300%, 0);
+        -o-transform: translate3d(200%, 300%, 0);
+        -ms-transform: translate3d(200%, 300%, 0);
+        -webkit-transform: translate3d(200%, 300%, 0);
+        transform: translate3d(200%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="2"].moveUp {
+          -moz-transform: translate3d(200%, 275%, 0);
+          -o-transform: translate3d(200%, 275%, 0);
+          -ms-transform: translate3d(200%, 275%, 0);
+          -webkit-transform: translate3d(200%, 275%, 0);
+          transform: translate3d(200%, 275%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="2"].moveDown {
+          -moz-transform: translate3d(200%, 325%, 0);
+          -o-transform: translate3d(200%, 325%, 0);
+          -ms-transform: translate3d(200%, 325%, 0);
+          -webkit-transform: translate3d(200%, 325%, 0);
+          transform: translate3d(200%, 325%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="2"].moveLeft {
+          -moz-transform: translate3d(175%, 300%, 0);
+          -o-transform: translate3d(175%, 300%, 0);
+          -ms-transform: translate3d(175%, 300%, 0);
+          -webkit-transform: translate3d(175%, 300%, 0);
+          transform: translate3d(175%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="2"].moveRight {
+          -moz-transform: translate3d(225%, 300%, 0);
+          -o-transform: translate3d(225%, 300%, 0);
+          -ms-transform: translate3d(225%, 300%, 0);
+          -webkit-transform: translate3d(225%, 300%, 0);
+          transform: translate3d(225%, 300%, 0); }
+      .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="3"] {
+        -moz-transform: translate3d(300%, 300%, 0);
+        -o-transform: translate3d(300%, 300%, 0);
+        -ms-transform: translate3d(300%, 300%, 0);
+        -webkit-transform: translate3d(300%, 300%, 0);
+        transform: translate3d(300%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="3"].moveUp {
+          -moz-transform: translate3d(300%, 275%, 0);
+          -o-transform: translate3d(300%, 275%, 0);
+          -ms-transform: translate3d(300%, 275%, 0);
+          -webkit-transform: translate3d(300%, 275%, 0);
+          transform: translate3d(300%, 275%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="3"].moveDown {
+          -moz-transform: translate3d(300%, 325%, 0);
+          -o-transform: translate3d(300%, 325%, 0);
+          -ms-transform: translate3d(300%, 325%, 0);
+          -webkit-transform: translate3d(300%, 325%, 0);
+          transform: translate3d(300%, 325%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="3"].moveLeft {
+          -moz-transform: translate3d(275%, 300%, 0);
+          -o-transform: translate3d(275%, 300%, 0);
+          -ms-transform: translate3d(275%, 300%, 0);
+          -webkit-transform: translate3d(275%, 300%, 0);
+          transform: translate3d(275%, 300%, 0); }
+        .game-container .game-field .game-matrix .matrix-cell[data-row="3"][data-col="3"].moveRight {
+          -moz-transform: translate3d(325%, 300%, 0);
+          -o-transform: translate3d(325%, 300%, 0);
+          -ms-transform: translate3d(325%, 300%, 0);
+          -webkit-transform: translate3d(325%, 300%, 0);
+          transform: translate3d(325%, 300%, 0); }
+
+.game-container .nav-controls .controls-cell {
+  vertical-align: bottom; }
+
+.game-container .nav-controls .level-cell {
+  vertical-align: bottom;
+  color: #9acb40; }
+  .game-container .nav-controls .level-cell .moves .moves-cont {
+    display: inline-block; }
+
+.game-container .nav-controls .game-goal-cell {
+  vertical-align: bottom; }
+  .game-container .nav-controls .game-goal-cell .game-goal-container {
+    float: right;
+    position: relative; }
+    .game-container .nav-controls .game-goal-cell .game-goal-container.zindexOver {
+      z-index: 110; }
+  .game-container .nav-controls .game-goal-cell .goal-label {
+    width: 100%;
+    text-align: center;
+    color: #9acb40;
+    display: inline-block; }
+  .game-container .nav-controls .game-goal-cell .goal-table {
+    width: 100%;
+    border: solid 1px white;
+    margin-bottom: -2px;
+    color: white;
+    background-color: #a2c64c; }
+    .game-container .nav-controls .game-goal-cell .goal-table .t-row {
+      text-align: center; }
+      .game-container .nav-controls .game-goal-cell .goal-table .t-row .t-cell {
+        vertical-align: middle;
+        border: solid 1px white; }
+    .game-container .nav-controls .game-goal-cell .goal-table.requireUserFocus {
+      border: solid 3px white;
+      margin-bottom: -4px;
+      margin-left: -2px;
+      -webkit-animation: pulsateBorder 3s linear infinite;
+      -moz-animation: pulsateBorder 3s linear infinite;
+      animation: pulsateBorder 3s linear infinite; }
+  .game-container .nav-controls .game-goal-cell .goal-hint-arrow-outer {
+    width: 100%;
+    position: relative;
+    height: 0; }
+  .game-container .nav-controls .game-goal-cell .goal-hint-arrow {
+    color: #FFB200;
+    left: 50%;
+    display: inline-block;
+    position: absolute;
+    -webkit-animation: pulsate 3s linear infinite;
+    -moz-animation: pulsate 3s linear infinite;
+    animation: pulsate 3s linear infinite; }
+
+.game-container .nav-controls .controls-cell {
+  width: 70px; }
+  .game-container .nav-controls .controls-cell .control-icon + .control-icon {
+    margin-top: 20px; }
+
+.game-container .nav-controls .level-cell {
+  font-size: 42px; }
+  .game-container .nav-controls .level-cell .level-id {
+    height: 50px;
+    line-height: 50px;
+    margin-left: -3px; }
+  .game-container .nav-controls .level-cell .moves {
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px; }
+    .game-container .nav-controls .level-cell .moves .moves-cont {
+      line-height: 25px; }
+
+.game-container .nav-controls .game-goal-cell .goal-label {
+  font-size: 16px;
+  margin-bottom: 10px; }
+
+.game-container .nav-controls .game-goal-cell .goal-table {
+  font-size: 20px; }
+  .game-container .nav-controls .game-goal-cell .goal-table .t-row .t-cell {
+    width: 15px;
+    line-height: 15px; }
+
+.game-container .nav-controls .game-goal-cell .goal-hint-arrow {
+  font-size: 20px;
+  top: -20px;
+  margin-left: -10px; }
+
+.game-completed-modal {
+  padding-top: 130px !important; }
+  .game-completed-modal .score-stars i {
+    display: inline-block; }
+    .game-completed-modal .score-stars i:not(.rewarded) {
+      color: #B9B9B9; }
+  .game-completed-modal .nav-controls {
+    text-align: center; }
+  .game-completed-modal .score-stars i + i {
+    margin-left: 5px; }
+  .game-completed-modal .nav-controls .control-icon + .control-icon {
+    margin-left: 20px; }
+
+.tutorial-container {
+  width: 100%;
+  height: 100%;
+  padding: 90px 20px 0;
+  box-sizing: border-box;
+  color: white; }
+  .tutorial-container .pseudo-matrix-cell {
+    position: absolute;
+    text-align: center; }
+  .tutorial-container .hint-actions i {
+    width: 100%;
+    text-align: right;
+    display: block; }
+  .tutorial-container .text-above {
+    text-align: center;
+    font-family: Ubuntu; }
+  .tutorial-container .text-below {
+    text-align: center;
+    font-family: Ubuntu; }
+  .tutorial-container .hint-actions {
+    margin-bottom: 20px;
+    font-size: 37px; }
+    .tutorial-container .hint-actions + i {
+      margin-top: 10px; }
+  .tutorial-container .text-above {
+    font-size: 20px;
+    margin-bottom: 40px;
+    height: 50px; }
+  .tutorial-container .text-below {
+    font-size: 12px; }
+
+@media only screen and (min-width: 500px) {
+  @-webkit-keyframes pulsate {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0); }
+    50% {
+      -webkit-transform: translate3d(0, -15px, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0); } }
+  @-moz-keyframes pulsate {
+    0% {
+      -moz-transform: translate3d(0, 0, 0); }
+    50% {
+      -moz-transform: translate3d(0, -15px, 0); }
+    100% {
+      -moz-transform: translate3d(0, 0, 0); } }
+  @keyframes pulsate {
+    0% {
+      transform: translate3d(0, 0, 0); }
+    50% {
+      transform: translate3d(0, -15px, 0); }
+    100% {
+      transform: translate3d(0, 0, 0); } }
+  .tutorial-container {
+    max-width: 500px;
+    margin: 0 auto;
+    cursor: pointer; }
+    .tutorial-container .hint-actions {
+      margin-bottom: 30px;
+      font-size: 55.5px; }
+      .tutorial-container .hint-actions + i {
+        margin-top: 15px; }
+    .tutorial-container .text-above {
+      font-size: 30px;
+      margin-bottom: 60px;
+      height: 75px; }
+    .tutorial-container .text-below {
+      font-size: 18px; }
+  .game-completed-modal {
+    padding-top: 195px !important; }
+    .game-completed-modal .score-stars i + i {
+      margin-left: 7.5px; }
+    .game-completed-modal .nav-controls .control-icon + .control-icon {
+      margin-left: 30px; }
+  .game-container .nav-controls .controls-cell {
+    width: 105px; }
+    .game-container .nav-controls .controls-cell .control-icon + .control-icon {
+      margin-top: 30px; }
+  .game-container .nav-controls .level-cell {
+    font-size: 63px; }
+    .game-container .nav-controls .level-cell .level-id {
+      height: 75px;
+      line-height: 75px;
+      margin-left: -4.5px; }
+    .game-container .nav-controls .level-cell .moves {
+      font-size: 30px;
+      height: 75px;
+      line-height: 75px;
+      margin-top: 30px; }
+      .game-container .nav-controls .level-cell .moves .moves-cont {
+        line-height: 37.5px; }
+  .game-container .nav-controls .game-goal-cell .goal-label {
+    font-size: 24px;
+    margin-bottom: 15px; }
+  .game-container .nav-controls .game-goal-cell .goal-table {
+    font-size: 30px; }
+    .game-container .nav-controls .game-goal-cell .goal-table .t-row .t-cell {
+      width: 22.5px;
+      line-height: 22.5px; }
+  .game-container .nav-controls .game-goal-cell .goal-hint-arrow {
+    font-size: 30px;
+    top: -30px;
+    margin-left: -15px; } }
+
+@media only screen and (max-height: 480px) {
+  @-webkit-keyframes pulsate {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0); }
+    50% {
+      -webkit-transform: translate3d(0, -9px, 0); }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0); } }
+  @-moz-keyframes pulsate {
+    0% {
+      -moz-transform: translate3d(0, 0, 0); }
+    50% {
+      -moz-transform: translate3d(0, -9px, 0); }
+    100% {
+      -moz-transform: translate3d(0, 0, 0); } }
+  @keyframes pulsate {
+    0% {
+      transform: translate3d(0, 0, 0); }
+    50% {
+      transform: translate3d(0, -9px, 0); }
+    100% {
+      transform: translate3d(0, 0, 0); } }
+  .game-completed-modal {
+    padding-top: 117px !important; }
+    .game-completed-modal .score-stars i + i {
+      margin-left: 4.5px; }
+    .game-completed-modal .nav-controls .control-icon + .control-icon {
+      margin-left: 18px; }
+  .game-container .nav-controls .controls-cell {
+    width: 63px; }
+    .game-container .nav-controls .controls-cell .control-icon + .control-icon {
+      margin-top: 18px; }
+  .game-container .nav-controls .level-cell {
+    font-size: 37.8px; }
+    .game-container .nav-controls .level-cell .level-id {
+      height: 45px;
+      line-height: 45px;
+      margin-left: -2.7px; }
+    .game-container .nav-controls .level-cell .moves {
+      font-size: 18px;
+      height: 45px;
+      line-height: 45px;
+      margin-top: 18px; }
+      .game-container .nav-controls .level-cell .moves .moves-cont {
+        line-height: 22.5px; }
+  .game-container .nav-controls .game-goal-cell .goal-label {
+    font-size: 14.4px;
+    margin-bottom: 9px; }
+  .game-container .nav-controls .game-goal-cell .goal-table {
+    font-size: 18px; }
+    .game-container .nav-controls .game-goal-cell .goal-table .t-row .t-cell {
+      width: 13.5px;
+      line-height: 13.5px; }
+  .game-container .nav-controls .game-goal-cell .goal-hint-arrow {
+    font-size: 18px;
+    top: -18px;
+    margin-left: -9px; }
+  .tutorial-container .hint-actions {
+    margin-bottom: 18px;
+    font-size: 33.3px; }
+    .tutorial-container .hint-actions + i {
+      margin-top: 9px; }
+  .tutorial-container .text-above {
+    font-size: 18px;
+    margin-bottom: 36px;
+    height: 45px; }
+  .tutorial-container .text-below {
+    font-size: 10.8px; }
+  .tutorial-container .hint-actions {
+    margin-bottom: 5px; } }
+
+@font-face {
+  font-family: 'Elusive-Icons';
+  src: url("../fonts/Elusive-Icons.eot?v=2");
+  src: url("../fonts/Elusive-Icons.eot?#iefix&v=2") format("embedded-opentype"), url("../fonts/Elusive-Icons.svg#Elusive-Icons?v=2") format("svg"), url("../fonts/Elusive-Icons.woff?v=2") format("woff"), url("../fonts/Elusive-Icons.ttf?v=2") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+[class*="el-icon-"] {
+  font-family: 'Elusive-Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.el-icon-zoom-out:before {
+  content: ""; }
+
+.el-icon-zoom-in:before {
+  content: ""; }
+
+.el-icon-youtube:before {
+  content: ""; }
+
+.el-icon-wrench-alt:before {
+  content: ""; }
+
+.el-icon-wrench:before {
+  content: ""; }
+
+.el-icon-wordpress:before {
+  content: ""; }
+
+.el-icon-wheelchair:before {
+  content: ""; }
+
+.el-icon-website-alt:before {
+  content: ""; }
+
+.el-icon-website:before {
+  content: ""; }
+
+.el-icon-warning-sign:before {
+  content: ""; }
+
+.el-icon-w3c:before {
+  content: ""; }
+
+.el-icon-volume-up:before {
+  content: ""; }
+
+.el-icon-volume-off:before {
+  content: ""; }
+
+.el-icon-volume-down:before {
+  content: ""; }
+
+.el-icon-vkontakte:before {
+  content: ""; }
+
+.el-icon-vimeo:before {
+  content: ""; }
+
+.el-icon-view-mode:before {
+  content: ""; }
+
+.el-icon-video-chat:before {
+  content: ""; }
+
+.el-icon-video-alt:before {
+  content: ""; }
+
+.el-icon-video:before {
+  content: ""; }
+
+.el-icon-viadeo:before {
+  content: ""; }
+
+.el-icon-user:before {
+  content: ""; }
+
+.el-icon-usd:before {
+  content: ""; }
+
+.el-icon-upload:before {
+  content: ""; }
+
+.el-icon-unlock-alt:before {
+  content: ""; }
+
+.el-icon-unlock:before {
+  content: ""; }
+
+.el-icon-universal-access:before {
+  content: ""; }
+
+.el-icon-twitter:before {
+  content: ""; }
+
+.el-icon-tumblr:before {
+  content: ""; }
+
+.el-icon-trash-alt:before {
+  content: ""; }
+
+.el-icon-trash:before {
+  content: ""; }
+
+.el-icon-torso:before {
+  content: ""; }
+
+.el-icon-tint:before {
+  content: ""; }
+
+.el-icon-time-alt:before {
+  content: ""; }
+
+.el-icon-time:before {
+  content: ""; }
+
+.el-icon-thumbs-up:before {
+  content: ""; }
+
+.el-icon-thumbs-down:before {
+  content: ""; }
+
+.el-icon-th-list:before {
+  content: ""; }
+
+.el-icon-th-large:before {
+  content: ""; }
+
+.el-icon-th:before {
+  content: ""; }
+
+.el-icon-text-width:before {
+  content: ""; }
+
+.el-icon-text-height:before {
+  content: ""; }
+
+.el-icon-tasks:before {
+  content: ""; }
+
+.el-icon-tags:before {
+  content: ""; }
+
+.el-icon-tag:before {
+  content: ""; }
+
+.el-icon-stumbleupon:before {
+  content: ""; }
+
+.el-icon-stop-alt:before {
+  content: ""; }
+
+.el-icon-stop:before {
+  content: ""; }
+
+.el-icon-step-forward:before {
+  content: ""; }
+
+.el-icon-step-backward:before {
+  content: ""; }
+
+.el-icon-star-empty:before {
+  content: ""; }
+
+.el-icon-star-alt:before {
+  content: ""; }
+
+.el-icon-star:before {
+  content: ""; }
+
+.el-icon-stackoverflow:before {
+  content: ""; }
+
+.el-icon-spotify:before {
+  content: ""; }
+
+.el-icon-speaker:before {
+  content: ""; }
+
+.el-icon-soundcloud:before {
+  content: ""; }
+
+.el-icon-smiley-alt:before {
+  content: ""; }
+
+.el-icon-smiley:before {
+  content: ""; }
+
+.el-icon-slideshare:before {
+  content: ""; }
+
+.el-icon-skype:before {
+  content: ""; }
+
+.el-icon-signal:before {
+  content: ""; }
+
+.el-icon-shopping-cart-sign:before {
+  content: ""; }
+
+.el-icon-shopping-cart:before {
+  content: ""; }
+
+.el-icon-share-alt:before {
+  content: ""; }
+
+.el-icon-share:before {
+  content: ""; }
+
+.el-icon-search-alt:before {
+  content: ""; }
+
+.el-icon-search:before {
+  content: ""; }
+
+.el-icon-screenshot:before {
+  content: ""; }
+
+.el-icon-screen-alt:before {
+  content: ""; }
+
+.el-icon-screen:before {
+  content: ""; }
+
+.el-icon-scissors:before {
+  content: ""; }
+
+.el-icon-rss:before {
+  content: ""; }
+
+.el-icon-road:before {
+  content: ""; }
+
+.el-icon-reverse-alt:before {
+  content: ""; }
+
+.el-icon-retweet:before {
+  content: ""; }
+
+.el-icon-return-key:before {
+  content: ""; }
+
+.el-icon-resize-vertical:before {
+  content: ""; }
+
+.el-icon-resize-small:before {
+  content: ""; }
+
+.el-icon-resize-horizontal:before {
+  content: ""; }
+
+.el-icon-resize-full:before {
+  content: ""; }
+
+.el-icon-repeat-alt:before {
+  content: ""; }
+
+.el-icon-repeat:before {
+  content: ""; }
+
+.el-icon-remove-sign:before {
+  content: ""; }
+
+.el-icon-remove-circle:before {
+  content: ""; }
+
+.el-icon-remove:before {
+  content: ""; }
+
+.el-icon-refresh:before {
+  content: ""; }
+
+.el-icon-reddit:before {
+  content: ""; }
+
+.el-icon-record:before {
+  content: ""; }
+
+.el-icon-random:before {
+  content: ""; }
+
+.el-icon-quotes-alt:before {
+  content: ""; }
+
+.el-icon-quotes:before {
+  content: ""; }
+
+.el-icon-question-sign:before {
+  content: ""; }
+
+.el-icon-question:before {
+  content: ""; }
+
+.el-icon-qrcode:before {
+  content: ""; }
+
+.el-icon-puzzle:before {
+  content: ""; }
+
+.el-icon-print:before {
+  content: ""; }
+
+.el-icon-podcast:before {
+  content: ""; }
+
+.el-icon-plus-sign:before {
+  content: ""; }
+
+.el-icon-plus:before {
+  content: ""; }
+
+.el-icon-play-circle:before {
+  content: ""; }
+
+.el-icon-play-alt:before {
+  content: ""; }
+
+.el-icon-play:before {
+  content: ""; }
+
+.el-icon-plane:before {
+  content: ""; }
+
+.el-icon-pinterest:before {
+  content: ""; }
+
+.el-icon-picture:before {
+  content: ""; }
+
+.el-icon-picasa:before {
+  content: ""; }
+
+.el-icon-photo-alt:before {
+  content: ""; }
+
+.el-icon-photo:before {
+  content: ""; }
+
+.el-icon-phone-alt:before {
+  content: ""; }
+
+.el-icon-phone:before,
+.el-icon-earphone:before {
+  content: ""; }
+
+.el-icon-person:before {
+  content: ""; }
+
+.el-icon-pencil-alt:before {
+  content: ""; }
+
+.el-icon-pencil:before {
+  content: ""; }
+
+.el-icon-pause-alt:before {
+  content: ""; }
+
+.el-icon-pause:before {
+  content: ""; }
+
+.el-icon-path:before {
+  content: ""; }
+
+.el-icon-paper-clip-alt:before,
+.el-icon-paperclip-alt:before {
+  content: ""; }
+
+.el-icon-paper-clip:before,
+.el-icon-paperclip:before {
+  content: ""; }
+
+.el-icon-opensource:before {
+  content: ""; }
+
+.el-icon-ok-sign:before {
+  content: ""; }
+
+.el-icon-ok-circle:before {
+  content: ""; }
+
+.el-icon-ok:before {
+  content: ""; }
+
+.el-icon-off:before {
+  content: ""; }
+
+.el-icon-network:before {
+  content: ""; }
+
+.el-icon-myspace:before {
+  content: ""; }
+
+.el-icon-music:before {
+  content: ""; }
+
+.el-icon-move:before {
+  content: ""; }
+
+.el-icon-minus-sign:before {
+  content: ""; }
+
+.el-icon-minus:before {
+  content: ""; }
+
+.el-icon-mic-alt:before {
+  content: ""; }
+
+.el-icon-mic:before {
+  content: ""; }
+
+.el-icon-map-marker-alt:before {
+  content: ""; }
+
+.el-icon-map-marker:before {
+  content: ""; }
+
+.el-icon-male:before {
+  content: ""; }
+
+.el-icon-magnet:before {
+  content: ""; }
+
+.el-icon-magic:before {
+  content: ""; }
+
+.el-icon-lock-alt:before {
+  content: ""; }
+
+.el-icon-lock:before {
+  content: ""; }
+
+.el-icon-livejournal:before {
+  content: ""; }
+
+.el-icon-list-alt:before {
+  content: ""; }
+
+.el-icon-list:before {
+  content: ""; }
+
+.el-icon-linkedin:before {
+  content: ""; }
+
+.el-icon-link:before {
+  content: ""; }
+
+.el-icon-lines:before {
+  content: ""; }
+
+.el-icon-leaf:before {
+  content: ""; }
+
+.el-icon-lastfm:before {
+  content: ""; }
+
+.el-icon-laptop-alt:before {
+  content: ""; }
+
+.el-icon-laptop:before {
+  content: ""; }
+
+.el-icon-key:before {
+  content: ""; }
+
+.el-icon-italic:before {
+  content: ""; }
+
+.el-icon-iphone-home:before {
+  content: ""; }
+
+.el-icon-instagram:before {
+  content: ""; }
+
+.el-icon-info-sign:before {
+  content: ""; }
+
+.el-icon-indent-right:before {
+  content: ""; }
+
+.el-icon-indent-left:before {
+  content: ""; }
+
+.el-icon-inbox-box:before {
+  content: ""; }
+
+.el-icon-inbox-alt:before {
+  content: ""; }
+
+.el-icon-inbox:before {
+  content: ""; }
+
+.el-icon-idea-alt:before {
+  content: ""; }
+
+.el-icon-idea:before {
+  content: ""; }
+
+.el-icon-hourglass:before {
+  content: ""; }
+
+.el-icon-home-alt:before {
+  content: ""; }
+
+.el-icon-home:before {
+  content: ""; }
+
+.el-icon-heart-empty:before {
+  content: ""; }
+
+.el-icon-heart-alt:before {
+  content: ""; }
+
+.el-icon-heart:before {
+  content: ""; }
+
+.el-icon-hearing-impaired:before {
+  content: ""; }
+
+.el-icon-headphones:before {
+  content: ""; }
+
+.el-icon-hdd:before {
+  content: ""; }
+
+.el-icon-hand-up:before {
+  content: ""; }
+
+.el-icon-hand-right:before {
+  content: ""; }
+
+.el-icon-hand-left:before {
+  content: ""; }
+
+.el-icon-hand-down:before {
+  content: ""; }
+
+.el-icon-guidedog:before {
+  content: ""; }
+
+.el-icon-group-alt:before {
+  content: ""; }
+
+.el-icon-group:before {
+  content: ""; }
+
+.el-icon-graph-alt:before {
+  content: ""; }
+
+.el-icon-graph:before {
+  content: ""; }
+
+.el-icon-googleplus:before {
+  content: ""; }
+
+.el-icon-globe-alt:before {
+  content: ""; }
+
+.el-icon-globe:before {
+  content: ""; }
+
+.el-icon-glasses:before {
+  content: ""; }
+
+.el-icon-glass:before {
+  content: ""; }
+
+.el-icon-github-text:before {
+  content: ""; }
+
+.el-icon-github:before {
+  content: ""; }
+
+.el-icon-gift:before {
+  content: ""; }
+
+.el-icon-gbp:before {
+  content: ""; }
+
+.el-icon-fullscreen:before {
+  content: ""; }
+
+.el-icon-friendfeed-rect:before {
+  content: ""; }
+
+.el-icon-friendfeed:before {
+  content: ""; }
+
+.el-icon-foursquare:before {
+  content: ""; }
+
+.el-icon-forward-alt:before {
+  content: ""; }
+
+.el-icon-forward:before {
+  content: ""; }
+
+.el-icon-fork:before {
+  content: ""; }
+
+.el-icon-fontsize:before {
+  content: ""; }
+
+.el-icon-font:before {
+  content: ""; }
+
+.el-icon-folder-sign:before {
+  content: ""; }
+
+.el-icon-folder-open:before {
+  content: ""; }
+
+.el-icon-folder-close:before {
+  content: ""; }
+
+.el-icon-folder:before {
+  content: ""; }
+
+.el-icon-flickr:before {
+  content: ""; }
+
+.el-icon-flag-alt:before {
+  content: ""; }
+
+.el-icon-flag:before {
+  content: ""; }
+
+.el-icon-fire:before {
+  content: ""; }
+
+.el-icon-filter:before {
+  content: ""; }
+
+.el-icon-film:before {
+  content: ""; }
+
+.el-icon-file-new-alt:before {
+  content: ""; }
+
+.el-icon-file-new:before {
+  content: ""; }
+
+.el-icon-file-edit-alt:before {
+  content: ""; }
+
+.el-icon-file-edit:before {
+  content: ""; }
+
+.el-icon-file-alt:before {
+  content: ""; }
+
+.el-icon-file:before {
+  content: ""; }
+
+.el-icon-female:before {
+  content: ""; }
+
+.el-icon-fast-forward:before {
+  content: ""; }
+
+.el-icon-fast-backward:before {
+  content: ""; }
+
+.el-icon-facetime-video:before {
+  content: ""; }
+
+.el-icon-facebook:before {
+  content: ""; }
+
+.el-icon-eye-open:before {
+  content: ""; }
+
+.el-icon-eye-close:before {
+  content: ""; }
+
+.el-icon-exclamation-sign:before {
+  content: ""; }
+
+.el-icon-eur:before {
+  content: ""; }
+
+.el-icon-error-alt:before {
+  content: ""; }
+
+.el-icon-error:before {
+  content: ""; }
+
+.el-icon-envelope-alt:before {
+  content: ""; }
+
+.el-icon-envelope:before {
+  content: ""; }
+
+.el-icon-eject:before {
+  content: ""; }
+
+.el-icon-edit:before {
+  content: ""; }
+
+.el-icon-dribbble:before {
+  content: ""; }
+
+.el-icon-download-alt:before {
+  content: ""; }
+
+.el-icon-download:before {
+  content: ""; }
+
+.el-icon-digg:before {
+  content: ""; }
+
+.el-icon-deviantart:before {
+  content: ""; }
+
+.el-icon-delicious:before {
+  content: ""; }
+
+.el-icon-dashboard:before {
+  content: ""; }
+
+.el-icon-css:before {
+  content: ""; }
+
+.el-icon-credit-card:before {
+  content: ""; }
+
+.el-icon-compass-alt:before {
+  content: ""; }
+
+.el-icon-compass:before {
+  content: ""; }
+
+.el-icon-comment-alt:before {
+  content: ""; }
+
+.el-icon-comment:before {
+  content: ""; }
+
+.el-icon-cogs:before {
+  content: ""; }
+
+.el-icon-cog-alt:before {
+  content: ""; }
+
+.el-icon-cog:before {
+  content: ""; }
+
+.el-icon-cloud-alt:before {
+  content: ""; }
+
+.el-icon-cloud:before {
+  content: ""; }
+
+.el-icon-circle-arrow-up:before {
+  content: ""; }
+
+.el-icon-circle-arrow-right:before {
+  content: ""; }
+
+.el-icon-circle-arrow-left:before {
+  content: ""; }
+
+.el-icon-circle-arrow-down:before {
+  content: ""; }
+
+.el-icon-child:before {
+  content: ""; }
+
+.el-icon-chevron-up:before {
+  content: ""; }
+
+.el-icon-chevron-right:before {
+  content: ""; }
+
+.el-icon-chevron-left:before {
+  content: ""; }
+
+.el-icon-chevron-down:before {
+  content: ""; }
+
+.el-icon-check-empty:before,
+.el-icon-unchecked:before {
+  content: ""; }
+
+.el-icon-check:before {
+  content: ""; }
+
+.el-icon-certificate:before {
+  content: ""; }
+
+.el-icon-cc:before {
+  content: ""; }
+
+.el-icon-caret-up:before {
+  content: ""; }
+
+.el-icon-caret-right:before {
+  content: ""; }
+
+.el-icon-caret-left:before {
+  content: ""; }
+
+.el-icon-caret-down:before {
+  content: ""; }
+
+.el-icon-car:before {
+  content: ""; }
+
+.el-icon-camera:before {
+  content: ""; }
+
+.el-icon-calendar-sign:before {
+  content: ""; }
+
+.el-icon-calendar:before {
+  content: ""; }
+
+.el-icon-bullhorn:before {
+  content: ""; }
+
+.el-icon-bulb:before {
+  content: ""; }
+
+.el-icon-brush:before {
+  content: ""; }
+
+.el-icon-broom:before {
+  content: ""; }
+
+.el-icon-briefcase:before {
+  content: ""; }
+
+.el-icon-braille:before {
+  content: ""; }
+
+.el-icon-bookmark-empty:before {
+  content: ""; }
+
+.el-icon-bookmark:before {
+  content: ""; }
+
+.el-icon-book:before {
+  content: ""; }
+
+.el-icon-bold:before {
+  content: ""; }
+
+.el-icon-blogger:before {
+  content: ""; }
+
+.el-icon-blind:before {
+  content: ""; }
+
+.el-icon-bell:before {
+  content: ""; }
+
+.el-icon-behance:before {
+  content: ""; }
+
+.el-icon-barcode:before {
+  content: ""; }
+
+.el-icon-ban-circle:before {
+  content: ""; }
+
+.el-icon-backward:before {
+  content: ""; }
+
+.el-icon-asl:before {
+  content: ""; }
+
+.el-icon-arrow-up:before {
+  content: ""; }
+
+.el-icon-arrow-right:before {
+  content: ""; }
+
+.el-icon-arrow-left:before {
+  content: ""; }
+
+.el-icon-arrow-down:before {
+  content: ""; }
+
+.el-icon-align-right:before {
+  content: ""; }
+
+.el-icon-align-left:before {
+  content: ""; }
+
+.el-icon-align-justify:before {
+  content: ""; }
+
+.el-icon-align-center:before {
+  content: ""; }
+
+.el-icon-adult:before {
+  content: ""; }
+
+.el-icon-adjust-alt:before {
+  content: ""; }
+
+.el-icon-adjust:before {
+  content: ""; }
+
+.el-icon-address-book-alt:before {
+  content: ""; }
+
+.el-icon-address-book:before {
+  content: ""; }
+
+.el-icon-asterisk:before {
+  content: ""; }
+
+/*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+  font-size: 1.3333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%; }
+
+.fa-2x {
+  font-size: 2em; }
+
+.fa-3x {
+  font-size: 3em; }
+
+.fa-4x {
+  font-size: 4em; }
+
+.fa-5x {
+  font-size: 5em; }
+
+.fa-fw {
+  width: 1.2857142857em;
+  text-align: center; }
+
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.1428571429em;
+  list-style-type: none; }
+  .fa-ul > li {
+    position: relative; }
+
+.fa-li {
+  position: absolute;
+  left: -2.1428571429em;
+  width: 2.1428571429em;
+  top: 0.1428571429em;
+  text-align: center; }
+  .fa-li.fa-lg {
+    left: -1.8571428571em; }
+
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eee;
+  border-radius: .1em; }
+
+.pull-right {
+  float: right; }
+
+.pull-left {
+  float: left; }
+
+.fa.pull-left {
+  margin-right: .3em; }
+
+.fa.pull-right {
+  margin-left: .3em; }
+
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear; }
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg); } }
+
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  filter: none; }
+
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle; }
+
+.fa-stack-1x, .fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+.fa-stack-1x {
+  line-height: inherit; }
+
+.fa-stack-2x {
+  font-size: 2em; }
+
+.fa-inverse {
+  color: #fff; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.fa-glass:before {
+  content: ""; }
+
+.fa-music:before {
+  content: ""; }
+
+.fa-search:before {
+  content: ""; }
+
+.fa-envelope-o:before {
+  content: ""; }
+
+.fa-heart:before {
+  content: ""; }
+
+.fa-star:before {
+  content: ""; }
+
+.fa-star-o:before {
+  content: ""; }
+
+.fa-user:before {
+  content: ""; }
+
+.fa-film:before {
+  content: ""; }
+
+.fa-th-large:before {
+  content: ""; }
+
+.fa-th:before {
+  content: ""; }
+
+.fa-th-list:before {
+  content: ""; }
+
+.fa-check:before {
+  content: ""; }
+
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: ""; }
+
+.fa-search-plus:before {
+  content: ""; }
+
+.fa-search-minus:before {
+  content: ""; }
+
+.fa-power-off:before {
+  content: ""; }
+
+.fa-signal:before {
+  content: ""; }
+
+.fa-gear:before,
+.fa-cog:before {
+  content: ""; }
+
+.fa-trash-o:before {
+  content: ""; }
+
+.fa-home:before {
+  content: ""; }
+
+.fa-file-o:before {
+  content: ""; }
+
+.fa-clock-o:before {
+  content: ""; }
+
+.fa-road:before {
+  content: ""; }
+
+.fa-download:before {
+  content: ""; }
+
+.fa-arrow-circle-o-down:before {
+  content: ""; }
+
+.fa-arrow-circle-o-up:before {
+  content: ""; }
+
+.fa-inbox:before {
+  content: ""; }
+
+.fa-play-circle-o:before {
+  content: ""; }
+
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: ""; }
+
+.fa-refresh:before {
+  content: ""; }
+
+.fa-list-alt:before {
+  content: ""; }
+
+.fa-lock:before {
+  content: ""; }
+
+.fa-flag:before {
+  content: ""; }
+
+.fa-headphones:before {
+  content: ""; }
+
+.fa-volume-off:before {
+  content: ""; }
+
+.fa-volume-down:before {
+  content: ""; }
+
+.fa-volume-up:before {
+  content: ""; }
+
+.fa-qrcode:before {
+  content: ""; }
+
+.fa-barcode:before {
+  content: ""; }
+
+.fa-tag:before {
+  content: ""; }
+
+.fa-tags:before {
+  content: ""; }
+
+.fa-book:before {
+  content: ""; }
+
+.fa-bookmark:before {
+  content: ""; }
+
+.fa-print:before {
+  content: ""; }
+
+.fa-camera:before {
+  content: ""; }
+
+.fa-font:before {
+  content: ""; }
+
+.fa-bold:before {
+  content: ""; }
+
+.fa-italic:before {
+  content: ""; }
+
+.fa-text-height:before {
+  content: ""; }
+
+.fa-text-width:before {
+  content: ""; }
+
+.fa-align-left:before {
+  content: ""; }
+
+.fa-align-center:before {
+  content: ""; }
+
+.fa-align-right:before {
+  content: ""; }
+
+.fa-align-justify:before {
+  content: ""; }
+
+.fa-list:before {
+  content: ""; }
+
+.fa-dedent:before,
+.fa-outdent:before {
+  content: ""; }
+
+.fa-indent:before {
+  content: ""; }
+
+.fa-video-camera:before {
+  content: ""; }
+
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: ""; }
+
+.fa-pencil:before {
+  content: ""; }
+
+.fa-map-marker:before {
+  content: ""; }
+
+.fa-adjust:before {
+  content: ""; }
+
+.fa-tint:before {
+  content: ""; }
+
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: ""; }
+
+.fa-share-square-o:before {
+  content: ""; }
+
+.fa-check-square-o:before {
+  content: ""; }
+
+.fa-arrows:before {
+  content: ""; }
+
+.fa-step-backward:before {
+  content: ""; }
+
+.fa-fast-backward:before {
+  content: ""; }
+
+.fa-backward:before {
+  content: ""; }
+
+.fa-play:before {
+  content: ""; }
+
+.fa-pause:before {
+  content: ""; }
+
+.fa-stop:before {
+  content: ""; }
+
+.fa-forward:before {
+  content: ""; }
+
+.fa-fast-forward:before {
+  content: ""; }
+
+.fa-step-forward:before {
+  content: ""; }
+
+.fa-eject:before {
+  content: ""; }
+
+.fa-chevron-left:before {
+  content: ""; }
+
+.fa-chevron-right:before {
+  content: ""; }
+
+.fa-plus-circle:before {
+  content: ""; }
+
+.fa-minus-circle:before {
+  content: ""; }
+
+.fa-times-circle:before {
+  content: ""; }
+
+.fa-check-circle:before {
+  content: ""; }
+
+.fa-question-circle:before {
+  content: ""; }
+
+.fa-info-circle:before {
+  content: ""; }
+
+.fa-crosshairs:before {
+  content: ""; }
+
+.fa-times-circle-o:before {
+  content: ""; }
+
+.fa-check-circle-o:before {
+  content: ""; }
+
+.fa-ban:before {
+  content: ""; }
+
+.fa-arrow-left:before {
+  content: ""; }
+
+.fa-arrow-right:before {
+  content: ""; }
+
+.fa-arrow-up:before {
+  content: ""; }
+
+.fa-arrow-down:before {
+  content: ""; }
+
+.fa-mail-forward:before,
+.fa-share:before {
+  content: ""; }
+
+.fa-expand:before {
+  content: ""; }
+
+.fa-compress:before {
+  content: ""; }
+
+.fa-plus:before {
+  content: ""; }
+
+.fa-minus:before {
+  content: ""; }
+
+.fa-asterisk:before {
+  content: ""; }
+
+.fa-exclamation-circle:before {
+  content: ""; }
+
+.fa-gift:before {
+  content: ""; }
+
+.fa-leaf:before {
+  content: ""; }
+
+.fa-fire:before {
+  content: ""; }
+
+.fa-eye:before {
+  content: ""; }
+
+.fa-eye-slash:before {
+  content: ""; }
+
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: ""; }
+
+.fa-plane:before {
+  content: ""; }
+
+.fa-calendar:before {
+  content: ""; }
+
+.fa-random:before {
+  content: ""; }
+
+.fa-comment:before {
+  content: ""; }
+
+.fa-magnet:before {
+  content: ""; }
+
+.fa-chevron-up:before {
+  content: ""; }
+
+.fa-chevron-down:before {
+  content: ""; }
+
+.fa-retweet:before {
+  content: ""; }
+
+.fa-shopping-cart:before {
+  content: ""; }
+
+.fa-folder:before {
+  content: ""; }
+
+.fa-folder-open:before {
+  content: ""; }
+
+.fa-arrows-v:before {
+  content: ""; }
+
+.fa-arrows-h:before {
+  content: ""; }
+
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: ""; }
+
+.fa-twitter-square:before {
+  content: ""; }
+
+.fa-facebook-square:before {
+  content: ""; }
+
+.fa-camera-retro:before {
+  content: ""; }
+
+.fa-key:before {
+  content: ""; }
+
+.fa-gears:before,
+.fa-cogs:before {
+  content: ""; }
+
+.fa-comments:before {
+  content: ""; }
+
+.fa-thumbs-o-up:before {
+  content: ""; }
+
+.fa-thumbs-o-down:before {
+  content: ""; }
+
+.fa-star-half:before {
+  content: ""; }
+
+.fa-heart-o:before {
+  content: ""; }
+
+.fa-sign-out:before {
+  content: ""; }
+
+.fa-linkedin-square:before {
+  content: ""; }
+
+.fa-thumb-tack:before {
+  content: ""; }
+
+.fa-external-link:before {
+  content: ""; }
+
+.fa-sign-in:before {
+  content: ""; }
+
+.fa-trophy:before {
+  content: ""; }
+
+.fa-github-square:before {
+  content: ""; }
+
+.fa-upload:before {
+  content: ""; }
+
+.fa-lemon-o:before {
+  content: ""; }
+
+.fa-phone:before {
+  content: ""; }
+
+.fa-square-o:before {
+  content: ""; }
+
+.fa-bookmark-o:before {
+  content: ""; }
+
+.fa-phone-square:before {
+  content: ""; }
+
+.fa-twitter:before {
+  content: ""; }
+
+.fa-facebook:before {
+  content: ""; }
+
+.fa-github:before {
+  content: ""; }
+
+.fa-unlock:before {
+  content: ""; }
+
+.fa-credit-card:before {
+  content: ""; }
+
+.fa-rss:before {
+  content: ""; }
+
+.fa-hdd-o:before {
+  content: ""; }
+
+.fa-bullhorn:before {
+  content: ""; }
+
+.fa-bell:before {
+  content: ""; }
+
+.fa-certificate:before {
+  content: ""; }
+
+.fa-hand-o-right:before {
+  content: ""; }
+
+.fa-hand-o-left:before {
+  content: ""; }
+
+.fa-hand-o-up:before {
+  content: ""; }
+
+.fa-hand-o-down:before {
+  content: ""; }
+
+.fa-arrow-circle-left:before {
+  content: ""; }
+
+.fa-arrow-circle-right:before {
+  content: ""; }
+
+.fa-arrow-circle-up:before {
+  content: ""; }
+
+.fa-arrow-circle-down:before {
+  content: ""; }
+
+.fa-globe:before {
+  content: ""; }
+
+.fa-wrench:before {
+  content: ""; }
+
+.fa-tasks:before {
+  content: ""; }
+
+.fa-filter:before {
+  content: ""; }
+
+.fa-briefcase:before {
+  content: ""; }
+
+.fa-arrows-alt:before {
+  content: ""; }
+
+.fa-group:before,
+.fa-users:before {
+  content: ""; }
+
+.fa-chain:before,
+.fa-link:before {
+  content: ""; }
+
+.fa-cloud:before {
+  content: ""; }
+
+.fa-flask:before {
+  content: ""; }
+
+.fa-cut:before,
+.fa-scissors:before {
+  content: ""; }
+
+.fa-copy:before,
+.fa-files-o:before {
+  content: ""; }
+
+.fa-paperclip:before {
+  content: ""; }
+
+.fa-save:before,
+.fa-floppy-o:before {
+  content: ""; }
+
+.fa-square:before {
+  content: ""; }
+
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: ""; }
+
+.fa-list-ul:before {
+  content: ""; }
+
+.fa-list-ol:before {
+  content: ""; }
+
+.fa-strikethrough:before {
+  content: ""; }
+
+.fa-underline:before {
+  content: ""; }
+
+.fa-table:before {
+  content: ""; }
+
+.fa-magic:before {
+  content: ""; }
+
+.fa-truck:before {
+  content: ""; }
+
+.fa-pinterest:before {
+  content: ""; }
+
+.fa-pinterest-square:before {
+  content: ""; }
+
+.fa-google-plus-square:before {
+  content: ""; }
+
+.fa-google-plus:before {
+  content: ""; }
+
+.fa-money:before {
+  content: ""; }
+
+.fa-caret-down:before {
+  content: ""; }
+
+.fa-caret-up:before {
+  content: ""; }
+
+.fa-caret-left:before {
+  content: ""; }
+
+.fa-caret-right:before {
+  content: ""; }
+
+.fa-columns:before {
+  content: ""; }
+
+.fa-unsorted:before,
+.fa-sort:before {
+  content: ""; }
+
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: ""; }
+
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: ""; }
+
+.fa-envelope:before {
+  content: ""; }
+
+.fa-linkedin:before {
+  content: ""; }
+
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: ""; }
+
+.fa-legal:before,
+.fa-gavel:before {
+  content: ""; }
+
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: ""; }
+
+.fa-comment-o:before {
+  content: ""; }
+
+.fa-comments-o:before {
+  content: ""; }
+
+.fa-flash:before,
+.fa-bolt:before {
+  content: ""; }
+
+.fa-sitemap:before {
+  content: ""; }
+
+.fa-umbrella:before {
+  content: ""; }
+
+.fa-paste:before,
+.fa-clipboard:before {
+  content: ""; }
+
+.fa-lightbulb-o:before {
+  content: ""; }
+
+.fa-exchange:before {
+  content: ""; }
+
+.fa-cloud-download:before {
+  content: ""; }
+
+.fa-cloud-upload:before {
+  content: ""; }
+
+.fa-user-md:before {
+  content: ""; }
+
+.fa-stethoscope:before {
+  content: ""; }
+
+.fa-suitcase:before {
+  content: ""; }
+
+.fa-bell-o:before {
+  content: ""; }
+
+.fa-coffee:before {
+  content: ""; }
+
+.fa-cutlery:before {
+  content: ""; }
+
+.fa-file-text-o:before {
+  content: ""; }
+
+.fa-building-o:before {
+  content: ""; }
+
+.fa-hospital-o:before {
+  content: ""; }
+
+.fa-ambulance:before {
+  content: ""; }
+
+.fa-medkit:before {
+  content: ""; }
+
+.fa-fighter-jet:before {
+  content: ""; }
+
+.fa-beer:before {
+  content: ""; }
+
+.fa-h-square:before {
+  content: ""; }
+
+.fa-plus-square:before {
+  content: ""; }
+
+.fa-angle-double-left:before {
+  content: ""; }
+
+.fa-angle-double-right:before {
+  content: ""; }
+
+.fa-angle-double-up:before {
+  content: ""; }
+
+.fa-angle-double-down:before {
+  content: ""; }
+
+.fa-angle-left:before {
+  content: ""; }
+
+.fa-angle-right:before {
+  content: ""; }
+
+.fa-angle-up:before {
+  content: ""; }
+
+.fa-angle-down:before {
+  content: ""; }
+
+.fa-desktop:before {
+  content: ""; }
+
+.fa-laptop:before {
+  content: ""; }
+
+.fa-tablet:before {
+  content: ""; }
+
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: ""; }
+
+.fa-circle-o:before {
+  content: ""; }
+
+.fa-quote-left:before {
+  content: ""; }
+
+.fa-quote-right:before {
+  content: ""; }
+
+.fa-spinner:before {
+  content: ""; }
+
+.fa-circle:before {
+  content: ""; }
+
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: ""; }
+
+.fa-github-alt:before {
+  content: ""; }
+
+.fa-folder-o:before {
+  content: ""; }
+
+.fa-folder-open-o:before {
+  content: ""; }
+
+.fa-smile-o:before {
+  content: ""; }
+
+.fa-frown-o:before {
+  content: ""; }
+
+.fa-meh-o:before {
+  content: ""; }
+
+.fa-gamepad:before {
+  content: ""; }
+
+.fa-keyboard-o:before {
+  content: ""; }
+
+.fa-flag-o:before {
+  content: ""; }
+
+.fa-flag-checkered:before {
+  content: ""; }
+
+.fa-terminal:before {
+  content: ""; }
+
+.fa-code:before {
+  content: ""; }
+
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: ""; }
+
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: ""; }
+
+.fa-location-arrow:before {
+  content: ""; }
+
+.fa-crop:before {
+  content: ""; }
+
+.fa-code-fork:before {
+  content: ""; }
+
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: ""; }
+
+.fa-question:before {
+  content: ""; }
+
+.fa-info:before {
+  content: ""; }
+
+.fa-exclamation:before {
+  content: ""; }
+
+.fa-superscript:before {
+  content: ""; }
+
+.fa-subscript:before {
+  content: ""; }
+
+.fa-eraser:before {
+  content: ""; }
+
+.fa-puzzle-piece:before {
+  content: ""; }
+
+.fa-microphone:before {
+  content: ""; }
+
+.fa-microphone-slash:before {
+  content: ""; }
+
+.fa-shield:before {
+  content: ""; }
+
+.fa-calendar-o:before {
+  content: ""; }
+
+.fa-fire-extinguisher:before {
+  content: ""; }
+
+.fa-rocket:before {
+  content: ""; }
+
+.fa-maxcdn:before {
+  content: ""; }
+
+.fa-chevron-circle-left:before {
+  content: ""; }
+
+.fa-chevron-circle-right:before {
+  content: ""; }
+
+.fa-chevron-circle-up:before {
+  content: ""; }
+
+.fa-chevron-circle-down:before {
+  content: ""; }
+
+.fa-html5:before {
+  content: ""; }
+
+.fa-css3:before {
+  content: ""; }
+
+.fa-anchor:before {
+  content: ""; }
+
+.fa-unlock-alt:before {
+  content: ""; }
+
+.fa-bullseye:before {
+  content: ""; }
+
+.fa-ellipsis-h:before {
+  content: ""; }
+
+.fa-ellipsis-v:before {
+  content: ""; }
+
+.fa-rss-square:before {
+  content: ""; }
+
+.fa-play-circle:before {
+  content: ""; }
+
+.fa-ticket:before {
+  content: ""; }
+
+.fa-minus-square:before {
+  content: ""; }
+
+.fa-minus-square-o:before {
+  content: ""; }
+
+.fa-level-up:before {
+  content: ""; }
+
+.fa-level-down:before {
+  content: ""; }
+
+.fa-check-square:before {
+  content: ""; }
+
+.fa-pencil-square:before {
+  content: ""; }
+
+.fa-external-link-square:before {
+  content: ""; }
+
+.fa-share-square:before {
+  content: ""; }
+
+.fa-compass:before {
+  content: ""; }
+
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: ""; }
+
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: ""; }
+
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: ""; }
+
+.fa-euro:before,
+.fa-eur:before {
+  content: ""; }
+
+.fa-gbp:before {
+  content: ""; }
+
+.fa-dollar:before,
+.fa-usd:before {
+  content: ""; }
+
+.fa-rupee:before,
+.fa-inr:before {
+  content: ""; }
+
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: ""; }
+
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: ""; }
+
+.fa-won:before,
+.fa-krw:before {
+  content: ""; }
+
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: ""; }
+
+.fa-file:before {
+  content: ""; }
+
+.fa-file-text:before {
+  content: ""; }
+
+.fa-sort-alpha-asc:before {
+  content: ""; }
+
+.fa-sort-alpha-desc:before {
+  content: ""; }
+
+.fa-sort-amount-asc:before {
+  content: ""; }
+
+.fa-sort-amount-desc:before {
+  content: ""; }
+
+.fa-sort-numeric-asc:before {
+  content: ""; }
+
+.fa-sort-numeric-desc:before {
+  content: ""; }
+
+.fa-thumbs-up:before {
+  content: ""; }
+
+.fa-thumbs-down:before {
+  content: ""; }
+
+.fa-youtube-square:before {
+  content: ""; }
+
+.fa-youtube:before {
+  content: ""; }
+
+.fa-xing:before {
+  content: ""; }
+
+.fa-xing-square:before {
+  content: ""; }
+
+.fa-youtube-play:before {
+  content: ""; }
+
+.fa-dropbox:before {
+  content: ""; }
+
+.fa-stack-overflow:before {
+  content: ""; }
+
+.fa-instagram:before {
+  content: ""; }
+
+.fa-flickr:before {
+  content: ""; }
+
+.fa-adn:before {
+  content: ""; }
+
+.fa-bitbucket:before {
+  content: ""; }
+
+.fa-bitbucket-square:before {
+  content: ""; }
+
+.fa-tumblr:before {
+  content: ""; }
+
+.fa-tumblr-square:before {
+  content: ""; }
+
+.fa-long-arrow-down:before {
+  content: ""; }
+
+.fa-long-arrow-up:before {
+  content: ""; }
+
+.fa-long-arrow-left:before {
+  content: ""; }
+
+.fa-long-arrow-right:before {
+  content: ""; }
+
+.fa-apple:before {
+  content: ""; }
+
+.fa-windows:before {
+  content: ""; }
+
+.fa-android:before {
+  content: ""; }
+
+.fa-linux:before {
+  content: ""; }
+
+.fa-dribbble:before {
+  content: ""; }
+
+.fa-skype:before {
+  content: ""; }
+
+.fa-foursquare:before {
+  content: ""; }
+
+.fa-trello:before {
+  content: ""; }
+
+.fa-female:before {
+  content: ""; }
+
+.fa-male:before {
+  content: ""; }
+
+.fa-gittip:before {
+  content: ""; }
+
+.fa-sun-o:before {
+  content: ""; }
+
+.fa-moon-o:before {
+  content: ""; }
+
+.fa-archive:before {
+  content: ""; }
+
+.fa-bug:before {
+  content: ""; }
+
+.fa-vk:before {
+  content: ""; }
+
+.fa-weibo:before {
+  content: ""; }
+
+.fa-renren:before {
+  content: ""; }
+
+.fa-pagelines:before {
+  content: ""; }
+
+.fa-stack-exchange:before {
+  content: ""; }
+
+.fa-arrow-circle-o-right:before {
+  content: ""; }
+
+.fa-arrow-circle-o-left:before {
+  content: ""; }
+
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: ""; }
+
+.fa-dot-circle-o:before {
+  content: ""; }
+
+.fa-wheelchair:before {
+  content: ""; }
+
+.fa-vimeo-square:before {
+  content: ""; }
+
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: ""; }
+
+.fa-plus-square-o:before {
+  content: ""; }
+
+.fa-space-shuttle:before {
+  content: ""; }
+
+.fa-slack:before {
+  content: ""; }
+
+.fa-envelope-square:before {
+  content: ""; }
+
+.fa-wordpress:before {
+  content: ""; }
+
+.fa-openid:before {
+  content: ""; }
+
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: ""; }
+
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: ""; }
+
+.fa-yahoo:before {
+  content: ""; }
+
+.fa-google:before {
+  content: ""; }
+
+.fa-reddit:before {
+  content: ""; }
+
+.fa-reddit-square:before {
+  content: ""; }
+
+.fa-stumbleupon-circle:before {
+  content: ""; }
+
+.fa-stumbleupon:before {
+  content: ""; }
+
+.fa-delicious:before {
+  content: ""; }
+
+.fa-digg:before {
+  content: ""; }
+
+.fa-pied-piper:before {
+  content: ""; }
+
+.fa-pied-piper-alt:before {
+  content: ""; }
+
+.fa-drupal:before {
+  content: ""; }
+
+.fa-joomla:before {
+  content: ""; }
+
+.fa-language:before {
+  content: ""; }
+
+.fa-fax:before {
+  content: ""; }
+
+.fa-building:before {
+  content: ""; }
+
+.fa-child:before {
+  content: ""; }
+
+.fa-paw:before {
+  content: ""; }
+
+.fa-spoon:before {
+  content: ""; }
+
+.fa-cube:before {
+  content: ""; }
+
+.fa-cubes:before {
+  content: ""; }
+
+.fa-behance:before {
+  content: ""; }
+
+.fa-behance-square:before {
+  content: ""; }
+
+.fa-steam:before {
+  content: ""; }
+
+.fa-steam-square:before {
+  content: ""; }
+
+.fa-recycle:before {
+  content: ""; }
+
+.fa-automobile:before,
+.fa-car:before {
+  content: ""; }
+
+.fa-cab:before,
+.fa-taxi:before {
+  content: ""; }
+
+.fa-tree:before {
+  content: ""; }
+
+.fa-spotify:before {
+  content: ""; }
+
+.fa-deviantart:before {
+  content: ""; }
+
+.fa-soundcloud:before {
+  content: ""; }
+
+.fa-database:before {
+  content: ""; }
+
+.fa-file-pdf-o:before {
+  content: ""; }
+
+.fa-file-word-o:before {
+  content: ""; }
+
+.fa-file-excel-o:before {
+  content: ""; }
+
+.fa-file-powerpoint-o:before {
+  content: ""; }
+
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: ""; }
+
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: ""; }
+
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: ""; }
+
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: ""; }
+
+.fa-file-code-o:before {
+  content: ""; }
+
+.fa-vine:before {
+  content: ""; }
+
+.fa-codepen:before {
+  content: ""; }
+
+.fa-jsfiddle:before {
+  content: ""; }
+
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: ""; }
+
+.fa-circle-o-notch:before {
+  content: ""; }
+
+.fa-ra:before,
+.fa-rebel:before {
+  content: ""; }
+
+.fa-ge:before,
+.fa-empire:before {
+  content: ""; }
+
+.fa-git-square:before {
+  content: ""; }
+
+.fa-git:before {
+  content: ""; }
+
+.fa-hacker-news:before {
+  content: ""; }
+
+.fa-tencent-weibo:before {
+  content: ""; }
+
+.fa-qq:before {
+  content: ""; }
+
+.fa-wechat:before,
+.fa-weixin:before {
+  content: ""; }
+
+.fa-send:before,
+.fa-paper-plane:before {
+  content: ""; }
+
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: ""; }
+
+.fa-history:before {
+  content: ""; }
+
+.fa-circle-thin:before {
+  content: ""; }
+
+.fa-header:before {
+  content: ""; }
+
+.fa-paragraph:before {
+  content: ""; }
+
+.fa-sliders:before {
+  content: ""; }
+
+.fa-share-alt:before {
+  content: ""; }
+
+.fa-share-alt-square:before {
+  content: ""; }
+
+.fa-bomb:before {
+  content: ""; }
+
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: ""; }
+
+.fa-tty:before {
+  content: ""; }
+
+.fa-binoculars:before {
+  content: ""; }
+
+.fa-plug:before {
+  content: ""; }
+
+.fa-slideshare:before {
+  content: ""; }
+
+.fa-twitch:before {
+  content: ""; }
+
+.fa-yelp:before {
+  content: ""; }
+
+.fa-newspaper-o:before {
+  content: ""; }
+
+.fa-wifi:before {
+  content: ""; }
+
+.fa-calculator:before {
+  content: ""; }
+
+.fa-paypal:before {
+  content: ""; }
+
+.fa-google-wallet:before {
+  content: ""; }
+
+.fa-cc-visa:before {
+  content: ""; }
+
+.fa-cc-mastercard:before {
+  content: ""; }
+
+.fa-cc-discover:before {
+  content: ""; }
+
+.fa-cc-amex:before {
+  content: ""; }
+
+.fa-cc-paypal:before {
+  content: ""; }
+
+.fa-cc-stripe:before {
+  content: ""; }
+
+.fa-bell-slash:before {
+  content: ""; }
+
+.fa-bell-slash-o:before {
+  content: ""; }
+
+.fa-trash:before {
+  content: ""; }
+
+.fa-copyright:before {
+  content: ""; }
+
+.fa-at:before {
+  content: ""; }
+
+.fa-eyedropper:before {
+  content: ""; }
+
+.fa-paint-brush:before {
+  content: ""; }
+
+.fa-birthday-cake:before {
+  content: ""; }
+
+.fa-area-chart:before {
+  content: ""; }
+
+.fa-pie-chart:before {
+  content: ""; }
+
+.fa-line-chart:before {
+  content: ""; }
+
+.fa-lastfm:before {
+  content: ""; }
+
+.fa-lastfm-square:before {
+  content: ""; }
+
+.fa-toggle-off:before {
+  content: ""; }
+
+.fa-toggle-on:before {
+  content: ""; }
+
+.fa-bicycle:before {
+  content: ""; }
+
+.fa-bus:before {
+  content: ""; }
+
+.fa-ioxhost:before {
+  content: ""; }
+
+.fa-angellist:before {
+  content: ""; }
+
+.fa-cc:before {
+  content: ""; }
+
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: ""; }
+
+.fa-meanpath:before {
+  content: ""; }
